@@ -26,8 +26,8 @@ jobs:
         with:
           path: node_modules
           key: ${{ env.CACHE_KEY }}-${{ hashFiles('**/package-lock.json') }}
-      - name: Debug cached dependencies
-        run: ls -R ~/node_modules
+      # - name: Debug cached dependencies
+      #   run: ls -R ~/node_modules
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
