@@ -5,7 +5,6 @@ import eventRoutes from './routes/events.js';
 
 const app = express();
 
-
 app.use(bodyParser.json());
 
 app.use(eventRoutes);
