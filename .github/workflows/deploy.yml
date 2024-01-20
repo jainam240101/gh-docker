@@ -16,14 +16,14 @@ jobs:
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb
       MONGODB_CLUSTER_ADDRESS: mongodb
-      MONGODB_USERNAME: root
+      MONGODB_USERNAME: user
       MONGODB_PASSWORD: example
       PORT: 8080
     services:
       mongodb:
         image: mongo
         env:
-          MONGO_INIT_ROOT_USERNAME: root
+          MONGO_INIT_ROOT_USERNAME: user
           MONGO_INIT_ROOT_PASSWORD: example
     steps:
       - name: Get Code
